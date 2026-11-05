@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de privacidad – Hint Heart</title>
+<meta name="description" content="Política de privacidad del sitio web de Hint Heart y del uso de la API de Pinterest.">
+<meta name="theme-color" content="#FAEC7F">
+<link rel="canonical" href="https://hintheart.com/es/privacidad.html">
+<link rel="alternate" hreflang="en" href="https://hintheart.com/privacy.html">
+<link rel="alternate" hreflang="de" href="https://hintheart.com/de/datenschutz.html">
+<link rel="alternate" hreflang="es" href="https://hintheart.com/es/privacidad.html">
+<link rel="icon" type="image/png" sizes="32x32" href="../hh-assets/favicon-32.png">
+<link rel="apple-touch-icon" href="../hh-assets/apple-touch-icon.png">
+<link rel="preload" href="../hh-assets/fonts/baloo-2-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../hh-assets/fonts/nunito-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+  /* Schriften liegen auf dem eigenen Server (keine Verbindung zu Google, DSGVO-freundlich). Lizenz: SIL Open Font License, siehe hh-assets/fonts/ */
+  @font-face { font-family: 'Baloo 2'; font-weight: 600; font-style: normal; font-display: swap; src: url("../hh-assets/fonts/baloo-2-latin-600-normal.woff2") format('woff2'); }
+  @font-face { font-family: 'Baloo 2'; font-weight: 700; font-style: normal; font-display: swap; src: url("../hh-assets/fonts/baloo-2-latin-700-normal.woff2") format('woff2'); }
+  @font-face { font-family: 'Baloo 2'; font-weight: 800; font-style: normal; font-display: swap; src: url("../hh-assets/fonts/baloo-2-latin-800-normal.woff2") format('woff2'); }
+  @font-face { font-family: 'Nunito'; font-weight: 400; font-style: normal; font-display: swap; src: url("../hh-assets/fonts/nunito-latin-400-normal.woff2") format('woff2'); }
+  @font-face { font-family: 'Nunito'; font-weight: 600; font-style: normal; font-display: swap; src: url("../hh-assets/fonts/nunito-latin-600-normal.woff2") format('woff2'); }
+  @font-face { font-family: 'Nunito'; font-weight: 700; font-style: normal; font-display: swap; src: url("../hh-assets/fonts/nunito-latin-700-normal.woff2") format('woff2'); }
+
+  :root { --navy: #1F2F6D; --yellow: #FAEC7F; --sun: #FFF4A8; --coral: #D61E32; --cream: #FFFBF2; --mint: #D7F0E3; --pink: #FFE3E6; --ink: #2B2B33; }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--cream); color: var(--ink); -webkit-text-size-adjust: 100%;
+         font: 400 16px/1.5 'Nunito', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif; }
+  h1, h2, h3 { font-family: 'Baloo 2', 'Nunito', system-ui, sans-serif; color: var(--navy); margin: 0; font-weight: 800; line-height: 1.12; }
+  p { margin: 0; }
+  a { color: inherit; }
+  img { max-width: 100%; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
+  .skip { position: absolute; left: -999px; top: 8px; background: #fff; color: var(--navy); padding: 8px 14px; border-radius: 10px; z-index: 20; font-weight: 700; }
+  .skip:focus { left: 8px; }
+  a:focus-visible { outline: 3px solid var(--coral); outline-offset: 3px; }
+
+  .top { padding: 18px 0 14px; text-align: center; }
+  .top img { width: 150px; height: auto; display: inline-block; }
+  .nav { margin-top: 4px; font-family: 'Baloo 2', sans-serif; font-weight: 700; font-size: 15px; display: flex; flex-wrap: wrap; justify-content: center; }
+  .nav a { color: var(--navy); text-decoration: none; margin: 0 9px; opacity: .8; display: inline-block; padding: 2px 0; }
+  .nav a:hover { opacity: 1; text-decoration: underline; }
+  .nav a[aria-current="page"] { opacity: 1; border-bottom: 2px solid var(--coral); }
+
+  /* Titelkarte wie die gelbe Hero-Karte der Startseite */
+  .phero { border-radius: 32px; text-align: center; padding: 30px 20px 26px;
+           background: #FAEC7F; background: -webkit-linear-gradient(top left, var(--sun) 0%, var(--yellow) 100%); background: linear-gradient(160deg, var(--sun) 0%, var(--yellow) 100%); }
+  .phero h1 { font-size: clamp(25px, 7.4vw, 33px); letter-spacing: -.2px; hyphens: auto; overflow-wrap: anywhere; }   /* lange deutsche Woerter (Datenschutzerklaerung) brechen um */
+  .stand { display: inline-block; background: rgba(255,255,255,.75); color: var(--navy); font-weight: 700; font-size: 13.5px; padding: 4px 12px; border-radius: 999px; margin-top: 12px; }
+
+  /* Text in einer weissen Karte wie der 'About'-Block */
+  .doc { overflow-wrap: anywhere; background: #fff; border-radius: 22px; padding: 26px 22px 12px; max-width: 760px; margin: 22px auto 0; box-shadow: 0 6px 18px rgba(31,47,109,.11); }
+  .doc h2 { font-size: 21px; margin: 24px 0 6px; }
+  .doc h2:first-child { margin-top: 0; }
+  .doc p { margin: 0 0 12px; line-height: 1.6; }
+  .doc a { color: var(--coral); font-weight: 700; }
+  .doc code { background: var(--cream); padding: 1px 6px; border-radius: 6px; }
+  .todo { background: #FFF1A8; border-radius: 4px; padding: 0 4px; font-weight: 700; }
+  .note { border: 2px dashed var(--coral); border-radius: 16px; padding: 12px 16px; margin: 0 0 22px; font-size: 14.5px; background: var(--pink); }
+
+  .foot { text-align: center; padding: 38px 0 44px; font-size: 14px; }
+  .foot img { width: 96px; height: auto; opacity: .9; }
+  .foot p { margin-top: 8px; opacity: .7; }
+  .legal { margin-top: 10px; font-size: 13px; opacity: .6; }
+  .legal a { margin: 0 8px; }
+  @media (min-width: 620px) { .phero h1 { font-size: 40px; } .doc { padding: 32px 36px 16px; } }
+
+  /* Kontaktformular */
+  .cform .row { margin: 0 0 14px; }
+  .cform label { display: block; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+  .cform input[type=text], .cform input[type=email], .cform textarea { width: 100%; font: inherit; color: var(--ink); background: var(--cream);
+         border: 2px solid #C9CDE6; border-radius: 14px; padding: 11px 14px; }
+  .cform textarea { resize: vertical; min-height: 150px; }
+  .cform input:focus, .cform textarea:focus { outline: 3px solid var(--coral); outline-offset: 1px; border-color: var(--navy); }
+  .cform .hp { position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; }
+  .cform .check { display: flex; gap: 10px; align-items: flex-start; margin: 4px 0 16px; font-size: 15px; }
+  .cform .check input { margin-top: 4px; width: 20px; height: 20px; flex: none; accent-color: var(--navy); }
+  .cform .check label { display: inline; font-weight: 600; color: var(--ink); margin: 0; }
+  .btn { font: 800 17px 'Baloo 2', sans-serif; background: var(--navy); color: var(--yellow); border: 0; border-radius: 16px; padding: 12px 26px; cursor: pointer;
+         box-shadow: 0 6px 14px rgba(31,47,109,.25); }
+  .btn:disabled { opacity: .6; cursor: default; }
+  .cstat { margin-top: 12px; padding: 0; font-weight: 700; }
+  .cstat.ok, .cstat.err { padding: 12px 16px; border-radius: 14px; }
+  .cstat.ok { background: var(--mint); color: var(--navy); } .cstat.err { background: var(--pink); color: #8A1220; }
+
+  /* ---------- Sprachumschalter ---------- */
+  .langs { margin-top: 2px; font-family: 'Baloo 2', sans-serif; font-weight: 700; font-size: 13.5px; }
+  .langs a, .langs span { margin: 0 7px; color: var(--navy); text-decoration: none; display: inline-block; padding: 1px 0; }
+  .langs a { opacity: .7; } .langs a:hover { opacity: 1; text-decoration: underline; }
+  .langs .cur { border-bottom: 2px solid var(--coral); }
+  .legal { display: flex; flex-wrap: wrap; justify-content: center; row-gap: 4px; }   /* lange Links (DE/ES) duerfen in die naechste Zeile umbrechen */
+</style>
+</head>
+<body>
+<a class="skip" href="#doc">Saltar al contenido</a>
+<div class="wrap">
+
+  <header class="top">
+    <a href="./" aria-label="Hint Heart – inicio">
+      <picture>
+        <source type="image/webp" srcset="../hh-assets/hintheart_wordmark.webp">
+        <img src="../hh-assets/hintheart_wordmark.png" width="600" height="131" alt="Hint Heart">
+      </picture>
+    </a>
+    <nav class="nav" aria-label="Menú principal"><a href="./">Inicio</a><a href="privacidad.html" aria-current="page">Privacidad</a><a href="condiciones.html">Condiciones</a><a href="aviso-legal.html">Aviso legal</a><a href="contacto.html">Contacto</a></nav>
+    <p class="langs" aria-label="Language / Sprache / Idioma"><a href="../privacy.html" hreflang="en" lang="en">English</a><a href="../de/datenschutz.html" hreflang="de" lang="de">Deutsch</a><span class="cur" lang="es">Español</span></p>
+  </header>
+
+  <main>
+  <section class="phero" aria-labelledby="h-page">
+    <h1 id="h-page">Política de privacidad</h1>
+    <p class="stand">Última actualización: 5 de noviembre de 2026</p>
+  </section>
+
+  <article class="doc" id="doc">
+    <!-- ENTWURF: Die Abschnitte zu Hosting, Buecherliste/Weiterleitungen, Links zu Dritten und Rechten beschreiben den technischen Ist-Zustand
+         (GitHub Pages, go.hintheart.com auf Railway/Supabase, Klickzaehlung, ip-api.com) und sind KEINE Rechtsberatung: vor Veroeffentlichung
+         rechtlich pruefen. Den Satz zu ip-api.com streichen, falls die Landeserkennung geaendert wird. Kontaktformular: beschreibt Supabase-Speicherung,
+         Versand ueber Resend und 6 Monate Aufbewahrung (CONTACT_RETENTION_DAYS=180) - bei anderem Versand (SMTP) oder anderer Frist anpassen. -->
+    <p>Esta política de privacidad explica cómo el sitio web de Hint Heart y su aplicación asociada tratan los datos, también en relación con el uso de la API de Pinterest.</p>
+    <h2>Quiénes somos</h2>
+    <p>Hint Heart es una marca infantil independiente con un personaje propio. Este sitio web lo opera la persona responsable de la marca Hint Heart; véase el <a href="aviso-legal.html">Aviso legal</a>. Contacto: <a href="mailto:hintheart8@gmail.com">hintheart8@gmail.com</a></p>
+    <h2>Visita a este sitio web</h2>
+    <p>Este sitio web se aloja en GitHub Pages (GitHub, Inc., EE. UU.). Al visitarlo, el proveedor de alojamiento trata datos técnicamente necesarios, como la dirección IP, la fecha y la hora, el archivo solicitado y el tipo de navegador, en archivos de registro del servidor. La base jurídica es nuestro interés legítimo en un funcionamiento seguro y estable (art. 6.1.f RGPD). En este sitio web no utilizamos cookies de seguimiento ni herramientas de análisis. Las fuentes tipográficas se sirven desde nuestro propio servidor, por lo que no se establece ninguna conexión con Google.</p>
+    <h2>Lista de libros y redirecciones (go.hintheart.com)</h2>
+    <p>Al abrirse, esta página carga la lista de libros (título, portada, enlaces) desde nuestro propio servicio go.hintheart.com (alojamiento: Railway; base de datos: Supabase). Por motivos técnicos, su dirección IP se transmite a este servicio.</p>
+    <p>Si abre un enlace de compra nuestro (go.hintheart.com/…/buy/…) o la página que hay tras el código QR de uno de nuestros libros, contamos la visita de forma anónima: tipo de visita, libro, origen (por ejemplo, la red social de la que procede el enlace) y país. Para ello no guardamos su dirección IP ni cookies. Para redirigirle a la tienda de Amazon adecuada de su país, su dirección IP se envía brevemente al servicio de geolocalización ip-api.com, que devuelve el país. La base jurídica es nuestro interés legítimo (art. 6.1.f RGPD) en dirigir a los visitantes a la tienda correcta y en entender el alcance de nuestras publicaciones.</p>
+    <h2>Formulario de contacto</h2>
+    <p>Si nos escribe a través del formulario de contacto, tratamos su nombre (opcional), su dirección de correo electrónico y su mensaje para responder a su consulta. El mensaje se guarda en nuestra base de datos (Supabase) y se nos reenvía por correo electrónico; el envío se realiza a través del servicio de correo Resend (EE. UU.). Eliminamos los mensajes como máximo a los seis meses, salvo que existan obligaciones legales de conservación. Para proteger el formulario contra abusos, su dirección IP se mantiene brevemente en la memoria y no se guarda. La base jurídica es nuestro interés legítimo en responder a las consultas y proteger el formulario contra abusos (art. 6.1.f RGPD) o, si su consulta se refiere a un contrato, el art. 6.1.b RGPD. Facilitar sus datos es voluntario, pero sin una dirección de correo electrónico no podemos responder.</p>
+    <h2>Enlaces a terceros</h2>
+    <p>Este sitio web enlaza con Amazon y con nuestros perfiles en Instagram, Facebook, Pinterest, TikTok y YouTube. Solo abandona nuestro sitio cuando hace clic en uno de esos enlaces; a partir de ese momento se aplican las políticas de privacidad del proveedor correspondiente.</p>
+    <h2>API de Pinterest</h2>
+    <p>No recopilamos datos personales de usuarios de Pinterest. Nuestra aplicación utiliza la API de Pinterest únicamente para publicar nuestro propio contenido original (imágenes y descripciones) en nuestra propia cuenta de empresa de Pinterest. Los datos que obtenemos a través de la API, como los identificadores de pines o tableros, se refieren solo a nuestra propia cuenta y se conservan únicamente el tiempo necesario para crear y gestionar esos pines.</p>
+    <p>Utilizamos estos datos exclusivamente para crear, actualizar y gestionar pines en nuestro propio tablero de Pinterest como parte de nuestra producción automatizada de contenidos. No se usan para publicidad, elaboración de perfiles ni análisis por parte de terceros. No vendemos, revendemos ni redistribuimos contenido de Pinterest ni datos derivados de Pinterest a terceros.</p>
+    <p>Si nuestra aplicación se desconecta de Pinterest, dejamos de acceder de inmediato a la API de Pinterest y eliminamos todos los tokens de acceso de Pinterest almacenados localmente que pertenezcan a nuestra cuenta.</p>
+    <h2>YouTube y API de Google</h2>
+    <p>Nuestra aplicación también utiliza la YouTube Data API (una API de Google) para subir y gestionar nuestros propios vídeos originales en nuestro propio canal de YouTube. A través de esta API solo accedemos a datos de nuestro propio canal (como identificadores de vídeo y estado de la subida). No accedemos a datos personales de otros usuarios de YouTube, ni los recopilamos ni los tratamos. Utilizamos estos datos exclusivamente para publicar y gestionar nuestro propio contenido como parte de nuestra producción automatizada de contenidos; nunca se venden ni se comparten con terceros. El uso que Hint Heart hace de la información recibida de las API de Google cumple la <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, incluidos los requisitos de uso limitado (Limited Use). Si nuestra aplicación se desconecta de Google, dejamos de acceder a la API y eliminamos todos los tokens de acceso de Google/YouTube almacenados que pertenezcan a nuestra cuenta.</p>
+    <h2>Sus derechos</h2>
+    <p>Tiene derecho de acceso, rectificación, supresión y limitación del tratamiento de sus datos personales, a la portabilidad de los datos y a oponerse a los tratamientos basados en el interés legítimo (arts. 15 a 21 RGPD). Además, puede presentar una reclamación ante una autoridad de protección de datos. Para ejercer sus derechos, escríbanos al correo electrónico indicado abajo.</p>
+    <h2>Contacto</h2>
+    <p>Las preguntas sobre esta política o sobre el uso de la API de Pinterest por nuestra aplicación pueden enviarse a: <a href="mailto:hintheart8@gmail.com">hintheart8@gmail.com</a></p>
+    <h2>Aviso sobre Pinterest</h2>
+    <p>Esta aplicación utiliza la API de Pinterest para publicar contenido. Hint Heart es un proyecto independiente y no cuenta con el respaldo, la afiliación ni el patrocinio de Pinterest.</p>
+
+  </article>
+  </main>
+
+  <footer class="foot">
+    <picture>
+      <source type="image/webp" srcset="../hh-assets/hintheart_wordmark.webp">
+      <img src="../hh-assets/hintheart_wordmark.png" width="600" height="131" alt="Hint Heart" loading="lazy">
+    </picture>
+    <p>Hecho con 💛 para manitas curiosas.</p>
+    <p class="legal"><a href="privacidad.html">Privacidad</a><a href="condiciones.html">Condiciones de uso</a><a href="aviso-legal.html">Aviso legal</a><a href="contacto.html">Contacto</a></p>
+    <p class="legal">© 2026 Hint Heart</p>
+  </footer>
+
+</div>
+</body>
+</html>

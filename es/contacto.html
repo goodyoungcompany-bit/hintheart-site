@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contacto – Hint Heart</title>
+<meta name="description" content="Formulario de contacto de Hint Heart: preguntas, ideas o comentarios sobre nuestros libros.">
+<meta name="theme-color" content="#FAEC7F">
+<link rel="canonical" href="https://hintheart.com/es/contacto.html">
+<link rel="alternate" hreflang="en" href="https://hintheart.com/contact.html">
+<link rel="alternate" hreflang="de" href="https://hintheart.com/de/kontakt.html">
+<link rel="alternate" hreflang="es" href="https://hintheart.com/es/contacto.html">
+<link rel="icon" type="image/png" sizes="32x32" href="../hh-assets/favicon-32.png">
+<link rel="apple-touch-icon" href="../hh-assets/apple-touch-icon.png">
+<link rel="preload" href="../hh-assets/fonts/baloo-2-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../hh-assets/fonts/nunito-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+  /* Schriften liegen auf dem eigenen Server (keine Verbindung zu Google, DSGVO-freundlich). Lizenz: SIL Open Font License, siehe hh-assets/fonts/ */
+  @font-face { font-family: 'Baloo 2'; font-weight: 600; font-style: normal; font-display: swap; src: url("../hh-assets/fonts/baloo-2-latin-600-normal.woff2") format('woff2'); }
+  @font-face { font-family: 'Baloo 2'; font-weight: 700; font-style: normal; font-display: swap; src: url("../hh-assets/fonts/baloo-2-latin-700-normal.woff2") format('woff2'); }
+  @font-face { font-family: 'Baloo 2'; font-weight: 800; font-style: normal; font-display: swap; src: url("../hh-assets/fonts/baloo-2-latin-800-normal.woff2") format('woff2'); }
+  @font-face { font-family: 'Nunito'; font-weight: 400; font-style: normal; font-display: swap; src: url("../hh-assets/fonts/nunito-latin-400-normal.woff2") format('woff2'); }
+  @font-face { font-family: 'Nunito'; font-weight: 600; font-style: normal; font-display: swap; src: url("../hh-assets/fonts/nunito-latin-600-normal.woff2") format('woff2'); }
+  @font-face { font-family: 'Nunito'; font-weight: 700; font-style: normal; font-display: swap; src: url("../hh-assets/fonts/nunito-latin-700-normal.woff2") format('woff2'); }
+
+  :root { --navy: #1F2F6D; --yellow: #FAEC7F; --sun: #FFF4A8; --coral: #D61E32; --cream: #FFFBF2; --mint: #D7F0E3; --pink: #FFE3E6; --ink: #2B2B33; }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--cream); color: var(--ink); -webkit-text-size-adjust: 100%;
+         font: 400 16px/1.5 'Nunito', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif; }
+  h1, h2, h3 { font-family: 'Baloo 2', 'Nunito', system-ui, sans-serif; color: var(--navy); margin: 0; font-weight: 800; line-height: 1.12; }
+  p { margin: 0; }
+  a { color: inherit; }
+  img { max-width: 100%; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
+  .skip { position: absolute; left: -999px; top: 8px; background: #fff; color: var(--navy); padding: 8px 14px; border-radius: 10px; z-index: 20; font-weight: 700; }
+  .skip:focus { left: 8px; }
+  a:focus-visible { outline: 3px solid var(--coral); outline-offset: 3px; }
+
+  .top { padding: 18px 0 14px; text-align: center; }
+  .top img { width: 150px; height: auto; display: inline-block; }
+  .nav { margin-top: 4px; font-family: 'Baloo 2', sans-serif; font-weight: 700; font-size: 15px; display: flex; flex-wrap: wrap; justify-content: center; }
+  .nav a { color: var(--navy); text-decoration: none; margin: 0 9px; opacity: .8; display: inline-block; padding: 2px 0; }
+  .nav a:hover { opacity: 1; text-decoration: underline; }
+  .nav a[aria-current="page"] { opacity: 1; border-bottom: 2px solid var(--coral); }
+
+  /* Titelkarte wie die gelbe Hero-Karte der Startseite */
+  .phero { border-radius: 32px; text-align: center; padding: 30px 20px 26px;
+           background: #FAEC7F; background: -webkit-linear-gradient(top left, var(--sun) 0%, var(--yellow) 100%); background: linear-gradient(160deg, var(--sun) 0%, var(--yellow) 100%); }
+  .phero h1 { font-size: clamp(25px, 7.4vw, 33px); letter-spacing: -.2px; hyphens: auto; overflow-wrap: anywhere; }   /* lange deutsche Woerter (Datenschutzerklaerung) brechen um */
+  .stand { display: inline-block; background: rgba(255,255,255,.75); color: var(--navy); font-weight: 700; font-size: 13.5px; padding: 4px 12px; border-radius: 999px; margin-top: 12px; }
+
+  /* Text in einer weissen Karte wie der 'About'-Block */
+  .doc { overflow-wrap: anywhere; background: #fff; border-radius: 22px; padding: 26px 22px 12px; max-width: 760px; margin: 22px auto 0; box-shadow: 0 6px 18px rgba(31,47,109,.11); }
+  .doc h2 { font-size: 21px; margin: 24px 0 6px; }
+  .doc h2:first-child { margin-top: 0; }
+  .doc p { margin: 0 0 12px; line-height: 1.6; }
+  .doc a { color: var(--coral); font-weight: 700; }
+  .doc code { background: var(--cream); padding: 1px 6px; border-radius: 6px; }
+  .todo { background: #FFF1A8; border-radius: 4px; padding: 0 4px; font-weight: 700; }
+  .note { border: 2px dashed var(--coral); border-radius: 16px; padding: 12px 16px; margin: 0 0 22px; font-size: 14.5px; background: var(--pink); }
+
+  .foot { text-align: center; padding: 38px 0 44px; font-size: 14px; }
+  .foot img { width: 96px; height: auto; opacity: .9; }
+  .foot p { margin-top: 8px; opacity: .7; }
+  .legal { margin-top: 10px; font-size: 13px; opacity: .6; }
+  .legal a { margin: 0 8px; }
+  @media (min-width: 620px) { .phero h1 { font-size: 40px; } .doc { padding: 32px 36px 16px; } }
+
+  /* Kontaktformular */
+  .cform .row { margin: 0 0 14px; }
+  .cform label { display: block; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+  .cform input[type=text], .cform input[type=email], .cform textarea { width: 100%; font: inherit; color: var(--ink); background: var(--cream);
+         border: 2px solid #C9CDE6; border-radius: 14px; padding: 11px 14px; }
+  .cform textarea { resize: vertical; min-height: 150px; }
+  .cform input:focus, .cform textarea:focus { outline: 3px solid var(--coral); outline-offset: 1px; border-color: var(--navy); }
+  .cform .hp { position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; }
+  .cform .check { display: flex; gap: 10px; align-items: flex-start; margin: 4px 0 16px; font-size: 15px; }
+  .cform .check input { margin-top: 4px; width: 20px; height: 20px; flex: none; accent-color: var(--navy); }
+  .cform .check label { display: inline; font-weight: 600; color: var(--ink); margin: 0; }
+  .btn { font: 800 17px 'Baloo 2', sans-serif; background: var(--navy); color: var(--yellow); border: 0; border-radius: 16px; padding: 12px 26px; cursor: pointer;
+         box-shadow: 0 6px 14px rgba(31,47,109,.25); }
+  .btn:disabled { opacity: .6; cursor: default; }
+  .cstat { margin-top: 12px; padding: 0; font-weight: 700; }
+  .cstat.ok, .cstat.err { padding: 12px 16px; border-radius: 14px; }
+  .cstat.ok { background: var(--mint); color: var(--navy); } .cstat.err { background: var(--pink); color: #8A1220; }
+
+  /* ---------- Sprachumschalter ---------- */
+  .langs { margin-top: 2px; font-family: 'Baloo 2', sans-serif; font-weight: 700; font-size: 13.5px; }
+  .langs a, .langs span { margin: 0 7px; color: var(--navy); text-decoration: none; display: inline-block; padding: 1px 0; }
+  .langs a { opacity: .7; } .langs a:hover { opacity: 1; text-decoration: underline; }
+  .langs .cur { border-bottom: 2px solid var(--coral); }
+  .legal { display: flex; flex-wrap: wrap; justify-content: center; row-gap: 4px; }   /* lange Links (DE/ES) duerfen in die naechste Zeile umbrechen */
+</style>
+</head>
+<body>
+<a class="skip" href="#doc">Saltar al contenido</a>
+<div class="wrap">
+
+  <header class="top">
+    <a href="./" aria-label="Hint Heart – inicio">
+      <picture>
+        <source type="image/webp" srcset="../hh-assets/hintheart_wordmark.webp">
+        <img src="../hh-assets/hintheart_wordmark.png" width="600" height="131" alt="Hint Heart">
+      </picture>
+    </a>
+    <nav class="nav" aria-label="Menú principal"><a href="./">Inicio</a><a href="privacidad.html">Privacidad</a><a href="condiciones.html">Condiciones</a><a href="aviso-legal.html">Aviso legal</a><a href="contacto.html" aria-current="page">Contacto</a></nav>
+    <p class="langs" aria-label="Language / Sprache / Idioma"><a href="../contact.html" hreflang="en" lang="en">English</a><a href="../de/kontakt.html" hreflang="de" lang="de">Deutsch</a><span class="cur" lang="es">Español</span></p>
+  </header>
+
+  <main>
+  <section class="phero" aria-labelledby="h-page">
+    <h1 id="h-page">Contacto</h1>
+    
+  </section>
+
+  <article class="doc" id="doc">
+    <p>¿Preguntas, ideas o algún comentario sobre uno de nuestros libros? Escríbanos aquí y le responderemos por correo electrónico.</p>
+    <form id="cf" class="cform" novalidate>
+      <p class="row"><label for="cf-name">Nombre (opcional)</label><input id="cf-name" name="name" type="text" maxlength="100" autocomplete="name"></p>
+      <p class="row"><label for="cf-email">Correo electrónico *</label><input id="cf-email" name="email" type="email" required maxlength="200" autocomplete="email"></p>
+      <p class="row"><label for="cf-msg">Mensaje *</label><textarea id="cf-msg" name="message" required minlength="10" maxlength="4000" rows="7"></textarea></p>
+      <p class="hp" aria-hidden="true"><label>Website <input name="website" type="text" tabindex="-1" autocomplete="off"></label></p>
+      <p class="check"><input id="cf-consent" name="consent" type="checkbox" required><label for="cf-consent">Acepto que mis datos se traten para responder a mi mensaje. Más información en la <a href="privacidad.html">Política de privacidad</a>.</label></p>
+      <p><button class="btn" id="cf-send" type="submit">Enviar mensaje</button></p>
+      <p id="cf-status" class="cstat" role="status" aria-live="polite"></p>
+    </form>
+    <noscript><p class="note">El formulario de contacto necesita JavaScript. También puede escribirnos a hintheart8@gmail.com.</p></noscript>
+
+  </article>
+  </main>
+
+  <footer class="foot">
+    <picture>
+      <source type="image/webp" srcset="../hh-assets/hintheart_wordmark.webp">
+      <img src="../hh-assets/hintheart_wordmark.png" width="600" height="131" alt="Hint Heart" loading="lazy">
+    </picture>
+    <p>Hecho con 💛 para manitas curiosas.</p>
+    <p class="legal"><a href="privacidad.html">Privacidad</a><a href="condiciones.html">Condiciones de uso</a><a href="aviso-legal.html">Aviso legal</a><a href="contacto.html">Contacto</a></p>
+    <p class="legal">© 2026 Hint Heart</p>
+  </footer>
+
+</div>
+<script>
+(function () {
+  var API = "https://go.hintheart.com/api/contact", LANG = "es", M = {"sending": "Enviando …", "ok": "¡Gracias! Su mensaje se ha enviado. Responderemos por correo electrónico.", "email": "Introduzca una dirección de correo electrónico válida.", "message": "Escriba un mensaje (de 10 a 4000 caracteres).", "consent": "Marque la casilla para dar su consentimiento.", "rate": "Demasiados mensajes desde su red. Inténtelo de nuevo más tarde.", "too_fast": "Ha sido muy rápido. Espere un momento e inténtelo de nuevo, o recargue la página.", "spam": "Su mensaje parece spam (demasiados enlaces). Quite los enlaces e inténtelo de nuevo.", "server": "Lo sentimos, no ha funcionado. Inténtelo más tarde o escriba a hintheart8@gmail.com."};
+  var f = document.getElementById("cf"), st = document.getElementById("cf-status"), btn = document.getElementById("cf-send"), t0 = Date.now();
+  function say(msg, ok) { st.textContent = msg; st.className = "cstat " + (ok ? "ok" : "err"); }
+  f.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var d = { name: f.name.value.trim(), email: f.email.value.trim(), message: f.message.value.trim(), consent: f.consent.checked,
+              website: f.website.value, lang: LANG, t: t0 };
+    if (!/^[^@\s<>]+@[^@\s<>]+\.[^@\s<>]{2,}$/.test(d.email)) { say(M.email, false); f.email.focus(); return; }
+    if (d.message.length < 10 || d.message.length > 4000) { say(M.message, false); f.message.focus(); return; }
+    if (!d.consent) { say(M.consent, false); f.consent.focus(); return; }
+    btn.disabled = true; say(M.sending, true);
+    fetch(API, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(d) })
+      .then(function (r) { return r.json().then(function (j) { return { s: r.status, j: j }; }, function () { return { s: r.status, j: {} }; }); })
+      .then(function (x) {
+        if (x.j && x.j.ok) { say(M.ok, true); f.reset(); return; }
+        say(M[(x.j && x.j.error) || "server"] || M.server, false); btn.disabled = false;
+      })
+      .catch(function () { say(M.server, false); btn.disabled = false; });
+  });
+})();
+</script>
+</body>
+</html>
